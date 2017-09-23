@@ -6,5 +6,9 @@ import PackageDescription
 let package = Package(
     name: "Cbz2",
     pkgConfig: "libbz2",
+    providers: [
+        .brew(["bzip2"]),
+        .apt(["bzip2"])
+    ],
     dependencies: []
 )
